@@ -1,0 +1,33 @@
+.github-status {
+  a {
+    display: block;
+    background-image: url(http://github.global.ssl.fastly.net/images/spinners/octocat-spinner-128.gif);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 32px 32px;
+    padding-bottom: 30px;
+
+    &.status-good {
+      background-image: url(http://developer.github.com/images/status-icon-good.png);
+    }
+
+    &.status-minor {
+      background-image: url(http://developer.github.com/images/status-icon-minor.png);
+    }
+
+    &.status-major {
+      background-image: url(http://developer.github.com/images/status-icon-major.png);
+    }
+  }
+
+  &.small {
+    a {
+      width: 32px;
+      height: 32px;
+      padding-bottom: 0;
+      .github-status-text {
+        display: none;
+      }
+    }
+  }
+}

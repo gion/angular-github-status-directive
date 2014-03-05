@@ -1,0 +1,83 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/github-statu.css -->
+    <link rel="stylesheet" href="styles/github-status.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="githubStatus">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <h1>It's quite simple</h1>
+      <div class="jumbotron">
+        <h2>default widget</h2>
+        <p>the following code
+        <pre>&lt;div github-status&gt;&lt;/div&gt;</pre>
+        turns into :
+        </p>
+        <div github-status></div>
+      </div>
+      <div class="jumbotron">
+        <h2>small widget</h2>
+        <p>the following code
+        <pre>&lt;div github-status class="small"&gt;&lt;/div&gt;</pre>
+        turns into :
+        </p>
+        <div github-status class="small"></div>
+      </div>
+      <div class="jumbotron">
+        <h2>custom refresh</h2>
+        <p>the following code
+        <pre>&lt;div github-status refresh="refreshValue"&gt;&lt;/div&gt;
+&lt;button ng-click="refreshValue+=1" ng-init="refreshValue=1"&gt;
+  check again now
+&lt;/button&gt;</pre>
+        turns into :
+        </p>
+        <div github-status class="small" refresh="refreshValue"></div>
+        <button ng-click="refreshValue=refreshValue+1" ng-init="refreshValue=1">check again now</button>
+      </div>
+      <p>Fully customizable with css</p>
+    </div>
+
+
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/directives/github-status.js"></script>
+        <script src="scripts/services/githubStatusService.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
