@@ -1,5 +1,5 @@
 {
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": false,
   "name": "angular-github-status",
   "description": "an angular module (actually a directive) that shows the github status. Usefull for github applications that need to show/monitor the github pi status.",
