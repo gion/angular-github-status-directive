@@ -312,7 +312,7 @@ var livereloadPort = 12312;
                     ";(function(){\n" +
                     content
                       .replace(/\n/g, "\n\t")
-                      .replace(/\n\t("use strict"|'use strict');\n/g,"\n\n")
+                      .replace(/\n\t("use strict"|'use strict');\n/g,"\n\n") +
                     "\n}();";
           }
         }
