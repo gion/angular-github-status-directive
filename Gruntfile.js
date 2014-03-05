@@ -22,7 +22,9 @@ var livereloadPort = 12312;
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+      dist: 'dist',
+      tmp: '.tmp',
+      release: '.'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -299,6 +301,25 @@ var livereloadPort = 12312;
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      bowerMainScript: {
+        dest: '<%= yeoman.release %>/angular-github-status.js',
+        src: '<%= yeoman.tmp %>/concat/scripts/angular-github-status.js',
+        options: {
+          processContent: function (content, srcpath) {
+            return "// @autor: bogdan.gradinariu@gmail.com\n" +
+                    "// @github: https://github.com/gion/angular-github-status-directive\n\n" +
+                    ";(function(){\n" +
+                    content
+                      .replace(/\n/g, "\n\t")
+                      .replace(/\n\t("use strict"|'use strict');\n/g,"\n\n")
+                    "\n}();";
+          }
+        }
+      },
+      bowerMainStyle: {
+        dest: '<%= yeoman.release %>/angular-github-status.css',
+        src: '<%= yeoman.tmp %>/concat/styles/angular-github-status.css'
       }
     },
 
@@ -390,6 +411,8 @@ var livereloadPort = 12312;
     'concat',
     'ngmin',
     'copy:dist',
+    'copy:bowerMainScript',
+    'copy:bowerMainStyle',
     'cdnify',
     'cssmin',
     'uglify',
