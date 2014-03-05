@@ -1,11 +1,23 @@
 {
+  "version": "0.0.1",
+  "private": false,
   "name": "angular-github-status",
-  "version": "0.0.0",
+  "description": "an angular module (actually a directive) that shows the github status. Usefull for github applications that need to show/monitor the github pi status.",
+  "main": ["angular-github-status.js", "angular-github-status.css"],
+  "keywords": ["angular", "github", "api", "status", "directive"],
+  "authors": [
+    {
+      "name": "Gradinariu Bogdan",
+      "email": "bogdan.gradinariu@gmail.com",
+      "homepage": "http://stackoverflow.com/users/491075/gion-13"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gion/angular-github-status-directive.git"
+  },
   "dependencies": {
-    "angular": "1.2.6",
-    "json3": "~3.2.6",
-    "es5-shim": "~2.1.0",
-    "sass-bootstrap": "~3.0.2"
+    "angular": "1.2.6"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
