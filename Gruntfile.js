@@ -24,7 +24,7 @@ var livereloadPort = 12312;
       app: require('./bower.json').appPath || 'app',
       dist: 'dist',
       tmp: '.tmp',
-      release: '.'
+      release: 'release'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -411,8 +411,6 @@ var livereloadPort = 12312;
     'concat',
     'ngmin',
     'copy:dist',
-    'copy:bowerMainScript',
-    'copy:bowerMainStyle',
     'cdnify',
     'cssmin',
     'uglify',
@@ -421,9 +419,17 @@ var livereloadPort = 12312;
     'htmlmin'
   ]);
 
+
+
+  grunt.registerTask('release', [
+    'build',
+    'copy:bowerMainScript',
+    'copy:bowerMainStyle'
+  ]);
+
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
-    'build'
+    'release'
   ]);
 };

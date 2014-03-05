@@ -3,7 +3,7 @@
   "private": false,
   "name": "angular-github-status",
   "description": "an angular module (actually a directive) that shows the github status. Usefull for github applications that need to show/monitor the github pi status.",
-  "main": ["angular-github-status.js", "angular-github-status.css"],
+  "main": ["release/angular-github-status.js", "release/angular-github-status.css"],
   "keywords": ["angular", "github", "api", "status", "directive"],
   "authors": [
     {

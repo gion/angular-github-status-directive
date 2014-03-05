@@ -1,0 +1,42 @@
+/* line 2, ../../app/styles/github-status.scss */
+
+.github-status a {
+  display: block;
+  background-image: url(http://github.global.ssl.fastly.net/images/spinners/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 32px 32px;
+  padding-bottom: 30px;
+}
+
+/* line 10, ../../app/styles/github-status.scss */
+
+.github-status a.status-good {
+  background-image: url(http://developer.github.com/images/status-icon-good.png);
+}
+
+/* line 14, ../../app/styles/github-status.scss */
+
+.github-status a.status-minor {
+  background-image: url(http://developer.github.com/images/status-icon-minor.png);
+}
+
+/* line 18, ../../app/styles/github-status.scss */
+
+.github-status a.status-major {
+  background-image: url(http://developer.github.com/images/status-icon-major.png);
+}
+
+/* line 24, ../../app/styles/github-status.scss */
+
+.github-status.small a {
+  width: 32px;
+  height: 32px;
+  padding-bottom: 0;
+}
+
+/* line 28, ../../app/styles/github-status.scss */
+
+.github-status.small a .github-status-text {
+  display: none;
+}
