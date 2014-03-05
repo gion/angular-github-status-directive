@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 module.exports = function (grunt) {
-var livereloadPort = 12312;
+  var livereloadPort = 12312;
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -307,13 +307,13 @@ var livereloadPort = 12312;
         src: '<%= yeoman.tmp %>/concat/scripts/angular-github-status.js',
         options: {
           processContent: function (content, srcpath) {
-            return "// @autor: bogdan.gradinariu@gmail.com\n" +
-                    "// @github: https://github.com/gion/angular-github-status-directive\n\n" +
-                    ";(function(){\n" +
+            return  '// @autor: bogdan.gradinariu@gmail.com\n' +
+                    '// @github: https://github.com/gion/angular-github-status-directive\n\n' +
+                    ';(function(){\n' +
                     content
-                      .replace(/\n/g, "\n\t")
-                      .replace(/\n\t("use strict"|'use strict');\n/g,"\n\n") +
-                    "\n}();";
+                      .replace(/\n/g, '\n\t')
+                      .replace(/\n\t("use strict"|'use strict');\n/g,'\n\n') +
+                    '\n})();';
           }
         }
       },
